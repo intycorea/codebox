@@ -17,3 +17,20 @@ body {
 .logo{
   margin-left: 67px;
 }
+
+.form-login{
+
+}
+
+.div-ld{
+  background: radial-gradient(circle farthest-corner at 200px 0, #434752, #000);
+  background-position: top left;
+  position: relative;
+  color: aliceblue;
+}
+
+@media (min-width: 576px) {
+  .div-ld {
+    padding: 4rem 2rem;
+  }
+}
