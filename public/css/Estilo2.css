@@ -69,11 +69,25 @@
     height: 100%;
     overflow: hidden;
   }
+
+  .word_ld{
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
   
   .split_ld.left {
     left:0;
     background: url('https://image.ibb.co/m56Czw/designer.jpg') center center no-repeat;
     background-size: cover;
+  }
+
+  .word_ld{
+
   }
   
   .split_ld.left:before {
