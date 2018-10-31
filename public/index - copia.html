@@ -13,8 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-   
-    <link href="css/Estilo2.css" rel="stylesheet">
+    <link href="css/Estilo1.css" rel="stylesheet">
   </head>
 
   <body>
@@ -53,40 +52,31 @@
       </div>
     </nav>
 
-    <div class="ld">
-        <div class="split_ld left">
-          <h1>The Designer</h1>
-          <a href="#" class="botonld">Read More</a>
-        </div>
-        <div class="split_ld right">
-          <h1>The Programmer</h1>
-          <a href="#" class="botonld">Read More</a>
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class=" div-ld">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6"> 
+          <h1 class="display-3">Hello, world!</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          
+           </div>
+
+           <div class="col-xl-6 col-lg-6 col-md-6"> 
+              <div class="img-slider"> 
+                  <img  src="img/imagen8.png">
+                  <img src="img/imagen1.jpeg">
+              </div>
+           </div>
+          </div>
         </div>
       </div>
 
-      <script>
-          const left = document.querySelector(".left");
-          const right = document.querySelector(".right");
-          const ld = document.querySelector(".ld");
-          
-          left.addEventListener("mouseenter", () => {
-            ld.classList.add("hover-left");
-          });
-          
-          left.addEventListener("mouseleave", () => {
-            ld.classList.remove("hover-left");
-          });
-          
-          right.addEventListener("mouseenter", () => {
-            ld.classList.add("hover-right");
-          });
-          
-          right.addEventListener("mouseleave", () => {
-            ld.classList.remove("hover-right");
-          });
-      
-      
-      </script>
+  
+    </main>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
