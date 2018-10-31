@@ -4,7 +4,7 @@ body {
 }
 
 .barra-nav{
-  padding: 20px;
+  padding: 3px;
   background-color: rgba(52, 73, 94,1.0) !important;
   
 }
@@ -27,10 +27,13 @@ body {
   background-position: top left;
   position: relative;
   color: aliceblue;
+  padding: 10rem 2rem;
 }
 
+/*
 @media (min-width: 576px) {
   .div-ld {
     padding: 4rem 2rem;
   }
 }
+*/
