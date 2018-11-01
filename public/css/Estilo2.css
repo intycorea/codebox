@@ -30,16 +30,18 @@
   }
   
   .centrar {
+    font-family: 'Archivo Black', sans-serif;
     text-align: center;
     color: white;
-    margin-top: 313px;
-    margin-left: 199px;
+    margin-top: 232px;
+    margin-left: 162px;
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(-14%);
+    
     white-space: nowrap;
     position: absolute;
-    width: 43%;
-    height: 100%;
+    width: 67%;
+    height: 80%;
     overflow: hidden;
 
   }
