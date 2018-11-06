@@ -71,6 +71,10 @@
     margin-left: 260px;
   }
 
+  .ldlogos{
+    
+  }
+
   .botonld {
     display: block;
     position: absolute;
@@ -161,9 +165,11 @@
   }
   
   
-  .hover-right .right {
+  .hover-right .right  {
     width: var(--hover-width);
   }
+
+  
   
   .hover-right .left {
     width: var(--other-width);
