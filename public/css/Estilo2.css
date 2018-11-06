@@ -51,23 +51,24 @@
   .centrarlogos{
     margin-top: 248px;
     margin-left: 78px;
+    transform: translateX(3%);
+    
   }
 
 
   .icss{
-    margin-left: 375px;
+    margin-left: 438px;
 
   }
 
   .ijs{
-    margin-left: 577px;
+    margin-left: 625px;
     
   }
 
 
   .inode{
-
-
+    margin-left: 260px;
   }
 
   .botonld {
