@@ -121,7 +121,7 @@
   
   .split_ld.left {
     left:0;
-    background: url('https://image.ibb.co/m56Czw/designer.jpg') center center no-repeat;
+    background: url(../img/izquierda.jpg) center center no-repeat;
     background-size: cover;
   }
 
@@ -136,7 +136,7 @@
   
   .split_ld.right {
     right:0;
-    background: url('https://image.ibb.co/m3ZbRb/programmer.png') center center no-repeat;
+    background: url(../img/derecha.png) center center no-repeat;
     background-size: cover;
   }
   
