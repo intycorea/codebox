@@ -65,23 +65,69 @@
     </nav>
 
     
-      <div class="container">
+    <main role="main" class="container">
+      <div class="row">
 
-        <div class="row" >
-          <div class="form-log">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <h1>Regístrate</h1>
+              
+              <div class="row" id="formulario-signup">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <input  class="form-control" type="text" placeholder="Nombre" id="firstname">
+                    
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <input  class="form-control" type="text" placeholder="Apellido" id="lastname">
+                  
+                </div>
+                <div class="col-12">
+                  <input  class="form-control" type="text" placeholder="Correo" id="email">
+                  
+                </div>
+                <div class="col-12">
+                  <input class="form-control" type="password" placeholder="Contraseña" id="password">
+                  
+                </div>
+                <div class="col-12">
+                  <b>Cumpleaños</b>
+                  <input class="form-control" type="date" placeholder="Birthday" id= "birthday">
+                  
+                </div>
+                <div class="col-12">
+                  <label><input type="radio" name="rbt-genero" value="F"> Femenino</label>
+                  <label><input type="radio" name="rbt-genero" value="M"> Masculino</label>
+                  <hr>
 
-            <input type="text" placeholder="Correo">
-            <input type="password" placeholder="Contraseña">
-
-            <input type="button" value="login" >
-
-
-
-
+                  <input class="btn btn-success" type="button" value="Sign Up" onclick="registrar();">
+                  
+                </div>
+                
+              </div>
           </div>
-
-        </div> <!--fin rows-->
-      </div> <!-- fin container-->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-none d-sm-block">
+            <br>
+            <h2>O mediante redes sociales</h2>
+            <br>
+            <br>
+            <table id="tabla-iconos">
+              <tr>
+                <td><img src="img/icono1.png"></td>
+                <td><strong>See photos and updates</strong> from friends in News Feed.</td>
+              </tr>
+              <tr>
+                <td><img src="img/icono2.png"></td>
+                <td><strong>Share what's new</strong> in your life on your Timeline.</td>
+              </tr>
+              <tr>
+                <td><img src="img/icono3.png"></td>
+                <td><strong>Find more</strong> of what you're looking for with Facebook Search. </td>
+              </tr>
+            </table>
+            
+         </div>
+        
+      </div>
+    </main><!-- /.container -->
 
 
 

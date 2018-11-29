@@ -1,26 +1,92 @@
-:root{
-  background-image: url(../img/hero.jpg);
-}
 
 
   body{
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     height: 100%;
+    
   }
 
-  .form-log{
+  h1{
+    text-align: center;
+  }
 
+  .container{
+    margin-top: 122px;
+  }
+
+
+
+  .col-izq{
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.62);
+    color: #ffffff;
+    width: 350px;
+    height: 300px;
+    border-radius: 3px;
+    padding: 3rem 4rem 3rem 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s background-color;
 
   }
-  /*
 
-    background: rgba(223, 39, 39, 0.7);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .col-derec{
+    background-color: chartreuse;
+    flex: 1;
+  }
+
+  .formulario{
+    padding-left: 142px;
+  }
+
+  
+
+  /*  Formulario de registro*/
+  #formulario-signup .form-control {
+    margin: 7px;
 }
-*/
 
+main {
+  background-color: rgba(0, 0, 0, 0.62);
+  color: white;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+  @media only screen and (max-width: 300px) and (max-width: 600px) {
+    .formulario {
+      padding-left: 8px;
+      background-color: darkorange;
+    }
+  }
+
+  @media (min-width: 576px)
+    .col-sm-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+   
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
