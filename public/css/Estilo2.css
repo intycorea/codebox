@@ -71,9 +71,11 @@
     margin-left: 260px;
   }
 
-  .ldlogos{
-    
+  .iconos-social{
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 16px;
   }
+
 
   .botonld {
     display: block;
