@@ -15,7 +15,7 @@
   }
 
   .container{
-    margin-top: 122px;
+    margin-top: 100px;
   }
 
 
@@ -43,6 +43,7 @@
     padding-left: 142px;
   }
 
+
   
 
   /*  Formulario de registro*/
@@ -55,6 +56,12 @@
     font-size: 1em;
     padding-left: 30px;
   }
+
+  table{
+    margin-top: -30px;
+  }
+
+  
 
   .izq-color {
     background-color: rgba(223, 39, 39, 0.7);
@@ -76,6 +83,52 @@
   .fa-twitter{
     color: #1DA1F2;
   }
+
+  .btn-1{
+    background-color: rgba(230, 126, 34,1.0) !important;
+    border: 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 198px;
+    margin-top: -38px;
+}
+
+.btn-1:hover{
+    background-color:red;
+}
+
+.btn-2{
+  margin-left: 230px;
+  margin-top: 4px;
+}
+
+  h6{
+    display: inline-block;
+    position: relative;
+    color: rgb(32, 30, 25);
+    margin-left: 151px;
+  }
+
+  h6::after,h6::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+  }
+
+  h6::before{
+    left: -140px;
+  }
+
+  h6::after{
+    right: -140px;
+  }
+
+
+
+
 
 
 
