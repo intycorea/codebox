@@ -48,33 +48,32 @@
 
   }
 
-  .centrarlogos{
-    margin-top: 248px;
-    margin-left: 78px;
-    transform: translateX(3%);
-    
-  }
-
-
-  .icss{
-    margin-left: 438px;
-
-  }
-
-  .ijs{
-    margin-left: 625px;
-    
-  }
-
-
-  .inode{
-    margin-left: 260px;
-  }
+  
 
   .iconos-social{
     font-family: 'Sedgwick Ave', cursive;
     font-size: 16px;
   }
+
+/* Colores logos lado derecho ld*/
+  .fa-html5{
+    color: #E44F26;
+  }
+
+  .fa-css3-alt{
+    color: #1572B6;
+  }
+  .fa-js-square{
+    color: #EFD81D;
+  }
+
+  .fa-node{
+    color: #8BBF3D;
+  }
+
+  
+
+  
 
 
   .botonld {
@@ -138,7 +137,7 @@
   
   .split_ld.right {
     right:0;
-    background: url(../img/derecha.png) center center no-repeat;
+    background: url(../img/codificar.jpg) center center no-repeat;
     background-size: cover;
   }
   
