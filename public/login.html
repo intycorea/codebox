@@ -14,8 +14,6 @@
     <link href="fonts/ProstoOne-Regular.ttf" rel="stylesheet">
     <link href="fonts/Righteous-Regular.ttf" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +23,7 @@
     <link href="css/Estilo1.css" rel="stylesheet">
     <link href="css/registro.css" rel="stylesheet">
 
-  
+
   </head>
 
   <body>
@@ -55,53 +53,85 @@
             </li>
           
         </ul>
-       
+      
       </div>
     </nav>
 
-    <body>
-          <div class="container">
-            <div class="row">
+    
+    <main role="main" class="container">
+      <div class="row">
+
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 izq-color">
+              <h1>Login</h1>
               
-                <div class=".col-xl-6 .col-md-6 .col-xs-6 .col-12 col-izq" id="login" >
-                    
-                        <h1>Sign In</h1>
-                        <form class="formulario">
-                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <input type="text" placeholder="Email or phone number">
-                         </div>
-                        <input type="password" placeholder="Password">
-                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <button type="button" class="boton boton-rojo">Sign In</button>
-                         </div>
-                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <label><input type="checkbox"> Recordar</label>
-                          </div>
-                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <a href="#">¿Problemas de inicio de sesión?</a>
-                          </div>
-
-                        </form>
-                    
+              <div class="row" id="formulario-signup">
+                
+                <div class="col-12">
+                  <input  class="form-control" type="text" placeholder="Correo" id="email">
+                  
                 </div>
+                <div class="col-12">
+                  <input class="form-control" type="password" placeholder="Contraseña" id="password">
 
-                <div class=".col-xl-6 .col-md-6 .col-xs-6 .col-12 col-derec">
-                    <p>div lado derecho</p>
+                  <a href="#">¿Olvidó la contraseña?</a>
+                  <hr>
+                  <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Recordar</label>
+                  
+                </div>
+                <div class="col-12">
+                  
 
                 </div>
+                <div class="col-12">
 
-              
+                  <input class="btn btn-outline-light btn-1 btn-1-l" type="button" value="Login" onclick="registrar();">           
+                  
+                </div>
+                
+              </div>
+          </div>
 
-            </div> <!--/row-->
 
-          </div> <!--/div-->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-none d-sm-block derech-color">
+            <br>
+            <h2>O mediante redes sociales</h2>
+            <br>
+            <br>
+            <table id="tabla-iconos">
+              <tr>
+
+                <td> <a href="#"><i class="fab fa-facebook-square fa-3x"></a></i></td>
+                <td><a href="#" class="button" >Facebook</a></td>
+
+              </tr>
+              <tr>
+                <td><i class="fab fa-twitter fa-3x"></i></td>
+                <td><a href="#" class="button" >Twitter</a></td>
+              </tr>
+              <tr>
+                <td><i class="fab fa-github fa-3x"></i></td>
+                <td><a href="#" class="button" >GitHub</a></td>
+              </tr>
+            </table>
+            
+              <div>
+                  <h6 class="linea-efecto">Usuario no registrado, ingrese aquí</h6>
+                  <input class="btn btn-outline-light btn-1 btn-2 btn-2-l"   type="button" value="SignUp" onclick="registrar();"> 
+                  
+               </div> 
+            
+         </div>
+        
+      </div>
+    </main><!-- /.container -->
 
 
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
     
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/login.js"></script>
-  
+    <script src="js/all.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
