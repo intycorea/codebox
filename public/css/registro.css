@@ -15,7 +15,7 @@
   }
 
   .container{
-    margin-top: 51px;
+    margin-top: 67px;
   }
 
 
@@ -47,8 +47,15 @@
   
 
   /*  Formulario de registro*/
-  #formulario-signup .form-control {
-    margin: 7px;
+  #formulario-signup  .form-control{
+    margin: 5px;
+  }
+
+  #formulario-login{
+   
+    margin: 62px;
+    padding: 6px;
+
   }
 
   #tabla-iconos td {
@@ -60,6 +67,8 @@
   table{
     margin-top: -30px;
   }
+
+  
 
   
 
@@ -93,13 +102,30 @@
     margin-top: -67px;
 }
 
+.btn-1-l{
+  background-color: rgba(230, 126, 34,1.0) !important;
+  border: 0px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 138px;
+  margin-top: 60px;
+}
+
+
+
 .btn-1:hover{
     background-color:red;
 }
 
 .btn-2{
   margin-left: 230px;
+  margin-top: 58px;
+}
+
+.btn-2-l{
+  margin-left: 230px;
   margin-top: 62px;
+
 }
 
   h6{
