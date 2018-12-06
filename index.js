@@ -7,4 +7,4 @@ app.use(express.static("public"));
 
 //Crear y levantar el servidor web.
 app.listen(3004);
-console.log("Servidor inciado");
+console.log("Servidor inciado en el puerto 3004");
