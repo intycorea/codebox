@@ -49,6 +49,7 @@
   /*  Formulario de registro*/
   #formulario-signup  .form-control{
     margin: 5px;
+    margin: 7px;
   }
 
   #formulario-login .form-control {
@@ -59,7 +60,7 @@
   #formulario-login{
    
     padding: inherit;
-    margin: 30px;
+    margin: 28px;
 
   }
 
