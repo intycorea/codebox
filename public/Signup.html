@@ -22,6 +22,7 @@
     <!-- Custom styles for this template -->
     <link href="css/Estilo1.css" rel="stylesheet">
     <link href="css/registro.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
 
 
   </head>
@@ -74,7 +75,7 @@
                   
                 </div>
                 <div class="col-12">
-                  <input  class="form-control" type="text" placeholder="Correo" id="correo">
+                  <input  class="form-control" type="text" placeholder="Correo" id="email">
                   
                 </div>
                 <div class="col-12">
@@ -83,11 +84,11 @@
                 </div>
                 <div class="col-12">
                   
-                  <select class="form-control" id="planes" required="">
+                  <select class="form-control" id="plan" required="">
                       <option value="">Seleccione el tipo de plan*</option>
-                      <option value="">Gratis</option>
-                      <option value="">Developer</option>
-                      <option value="">Super</option>
+                      <option value="Gratis">Gratis</option>
+                      <option value="Developer">Developer</option>
+                      <option value="Super">Super</option>
                     </select>
                   
                 </div>
@@ -101,9 +102,7 @@
 
                   <i>Si ya está registrado,</i> <a  class="a-forgot" href="#">click aquí</a>
 
-                  <input class="btn btn-outline-light btn-1" type="button" value="SignUp" onclick="registrar();">
-                  
-                  
+                  <button type="button" class="btn btn-outline-light btn-1" onclick="guardarUsuario()">SignUp</button>
                 </div>
                 
               </div>
@@ -143,8 +142,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/all.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
   </body>
 </html>
