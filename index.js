@@ -33,6 +33,39 @@ app.use(
     }
 );
 
+
+app.post("/login", (request, response) => {
+    var conexion = mysql.createConnection(credenciales);
+    var body = request.body;
+    /*
+    var sql = `SELECT codigo_usuario, nombre_usuario, correo, url_imagen_perfil
+                FROM tbl_usuarios
+                WHERE correo = ? AND contrasena = ?;`;
+
+    */
+
+    var sql =`SELECT codigo_usuario, nombre, apellido, correo
+              FROM tbl_usuario 
+              WHERE correo=? AND password=?`;
+    
+    conexion.query(
+        sql,
+        [body.correo, body.contrasenia],
+        function(err, result){
+            if (err) throw err;
+            if (!_.isEmpty(result)){
+                request.session.usuario = result[0];
+                response.send({statusCode: 200, message: "Login exitoso"});
+            } else {
+                response.send({statusCode: 400, message: "Fallo en login"});
+            }
+        }
+    );
+});
+
+
+
+
 app.post("/crear-usuario", (request, response) => {
     var conexion = mysql.createConnection(credenciales);
     var body = request.body;

@@ -1,3 +1,48 @@
+
+function login(){
+	var correo = $("#correo_login").val();
+	var contrasenia = $("#password_login").val();
+	var usuario = {
+		correo, contrasenia
+	};
+	var isValid = true;
+	_.forEach(usuario, campo => {
+		if(_.isEmpty(campo)){
+			isValid = false;
+		}
+	});
+	if(isValid){
+		$.ajax({
+			url:"/login",
+			data: urlEncoded(usuario),
+			method:"POST",
+			dataType:"json",
+			success:function(respuesta){
+				var mensaje = "";
+				if (!_.isUndefined(respuesta.statusCode) && respuesta.statusCode == 200){
+					window.location.href ="../../home.html"
+				}
+				else{
+					mensaje = "ERROR AL INICIAR SESIÓN";
+				}
+				/*
+				$("#mensaje").text(mensaje);
+				$("#modalSuccess").modal("show");
+				*/
+			}
+		});
+	}
+}
+
+
+
+
+
+
+
+
+
+
 function guardarUsuario(){
     var plan = $("#plan").val();
     var usuario = $("#nombre").val();
