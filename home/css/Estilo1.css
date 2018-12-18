@@ -1,0 +1,41 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+
+
+body {
+  padding-top: 3.5rem;
+}
+
+.barra-nav{
+  padding: 4.5px;
+  background-color:rgba(44, 44, 84,1.0) !important;
+  font-size: 19px;
+  
+}
+
+#navbarsExampleDefault{
+      margin-right: 41px !important;
+      margin-left: 50px !important;
+}
+
+.logo{
+  margin-left: 67px;
+  margin-top: 16px;
+}
+
+
+.div-ld{
+  background: radial-gradient(circle farthest-corner at 200px 0, #434752, #000);
+  background-position: top left;
+  position: relative;
+  color: aliceblue;
+  padding: 10rem 10rem;
+}
+
+
+/*
+@media (min-width: 576px) {
+  .div-ld {
+    padding: 4rem 2rem;
+  }
+}
+*/
