@@ -16,7 +16,7 @@ var credenciales = {
 //Exponer una carpeta como publica, unicamente para archivos estaticos: .html, imagenes, .css, .js
 
 app.use(express.static("public")); //Middlewares
-// app.use(express.static("home"));
+  app.use(express.static("home")); //COMENTAR ESTO LUEGO
 app.use(session({secret:"#2@%#*(&%$#",resave:true, saveUninitialized:true})); //Middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -37,12 +37,7 @@ app.use(
 app.post("/login", (request, response) => {
     var conexion = mysql.createConnection(credenciales);
     var body = request.body;
-    /*
-    var sql = `SELECT codigo_usuario, nombre_usuario, correo, url_imagen_perfil
-                FROM tbl_usuarios
-                WHERE correo = ? AND contrasena = ?;`;
-
-    */
+    
 
     var sql =`SELECT codigo_usuario, nombre, apellido, correo
               FROM tbl_usuario 
