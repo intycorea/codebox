@@ -9,7 +9,7 @@ body {
 
 .barra-nav{
   padding: 4.5px;
-  background-color:rgba(44, 44, 84,1.0) !important;
+  background-color:rgba(44, 44, 84,1.0);
   font-size: 19px;
   
 }

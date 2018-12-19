@@ -99,8 +99,11 @@ app.post("/crear-contacto", (request, response) => {
 */
 
 
-
-
+app.get("/logout",function(req, res){
+    req.session.destroy();
+    res.redirect("index.html");
+	//respuesta.send("Sesion eliminada");
+});
 
 
 

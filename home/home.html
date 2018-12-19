@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -14,12 +14,48 @@
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet" type="text/css">
+
+    <!--Fonts-->
+    <link href="fonts/BalooBhaijaan-Regular.ttf" rel="stylesheet">
+    <link href="fonts/ProstoOne-Regular.ttf" rel="stylesheet">
+    <link href="fonts/Righteous-Regular.ttf" rel="stylesheet">
+    <link href="fonts/SedgwickAve-Regular.ttf" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/1140/2.0/1140.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js"></script>
+
+    <style>
+        .innerbox{float: left; width: 48%;border: 1px solid #ccc; padding:10px;max-height: 250px;}
+        .preview{ width: 98%;border: 1px solid #ccc; min-height: 400px; }
+        iframe{ width: 100%;border: 0.5px solid red; min-height: 400px;}
+
+        #jsEditor{
+            height: 200px;
+        }
+    </style>
 
 </head>
 
 <body>
+        <nav class="navbar navbar-expand-md  navbar-dark fixed-top bg-dark barra-nav">
+                <figure class="logo">
+                  <img src="img/logo2.png" src="index.html">
+                </figure>
+          
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+                 <h1 style="color:white">Welcome</h1>
+                
+                </div>
+              </nav>
     
 
     <div id="wrapper">
@@ -28,7 +64,7 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                    <br><br><br>
+                    <br><br><br><br><br>
                 <li class="sidebar-brand">
                     <h1 style="color:orange" >Code Box</h1>
                 </li>
@@ -47,21 +83,57 @@
                 <li>
                     <a href="#"><i class="fas fa-question-circle fa-2x"></i>  Ayuda</a>
                 </li>
+                <li>
+                        <a href="/logout"><i class="fas fa-sign-out-alt fa-2x  pull-right"  ></i>  Cerrar sesión</a>
+                        
+                    </li>
                 
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-
+        <br><br> <br><br><br>
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <h1>Simple Sidebar</h1>
-                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                <h1>Code Box</h1>
+                <br>
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Desplegar Menú</a>
-            
+    
+                <hr>
+                <div id="jsEditor">
+                var data = "hello";
+                body{
+                    color:red;
+                }
+                document.write("Hello World");
             </div>
-        </div>
+
+            <div id="container">
+                <div>
+                    <textarea class="innerbox html" placeholder="HTML AQUI"> </textarea>
+                    <textarea class="innerbox css" placeholder="CSS AQUI"> </textarea>
+                </div>
+
+                <div class="innerbox preview">
+                    <iframe id="live_update">
+                            <!DOCTYPE html>
+                                <html lang="en">
+                                     <head charset='utf-8'>
+                                         <meta >
+                                    </head>
+                                     <body>
+                                     </body>
+                                </html>
+                    </iframe>
+                </div>
+            </div>
+            
+    
+                                       
+            </div>
+        </div>     
+    </div>   
+
         <!-- /#page-content-wrapper -->
 
     </div>
@@ -70,9 +142,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/all.js"></script>
-    <script src="css/all.css"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/controlador.js"></script>
+    <script src="js/controladorHome.js"></script>
 
     <!-- Menu Toggle Script -->
     
@@ -81,6 +152,49 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
+    var e =ace.edit("jsEditor");
+    e.getSession().setMode("ace/mode/html");
+    e.setTheme("ace/theme/terminal");
+    //e.setTheme("ace/theme/xcode");
+    e.getSession().setTabSize(6);
+    e.renderer.setShowGutter(false);
+    console.log(e.getValue());
+
+    var a =ace.edit("jsEditor");
+    a.getSession().setMode("ace/mode/css");
+    a.setTheme("ace/theme/xcode");
+    //e.setTheme("ace/theme/xcode");
+    a.getSession().setTabSize(6);
+    a.renderer.setShowGutter(false);
+
+    
+    $(function(){
+    function fetchHtml(){
+        var html = $(".html").val();
+        return html;
+    }
+
+    function fetchCss(){
+        var css = $(".css").val();
+        return css;
+    }
+
+       $(".innerbox").on("keyup",function(){
+            var target = $("live_update")[0].contentWindow.document;
+            target.open();
+            target.close();
+
+            var html = fetchHtml();
+            var css = fetchCss();
+
+            $("body", target).append(html);
+            $("head", target).append("<style>"+ css + "</style>");
+       });
+
+    });
+
+
     </script>
 
     
