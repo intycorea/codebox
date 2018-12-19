@@ -19,8 +19,7 @@ function login(){
 			dataType:"json",
 			success:function(respuesta){
 				var mensaje = "";
-				$("#correo_login").html("");
-				$("#password_login").html("");
+				
 				if (!_.isUndefined(respuesta.statusCode) && respuesta.statusCode == 200){
 					window.location.href ="home.html"
 				}

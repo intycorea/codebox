@@ -4,6 +4,7 @@ var mysql = require("mysql");
 var session = require("express-session");
 var app = express();
 const _ = require("lodash");
+var flash =require("connect-flash");
 
 var credenciales = {
     user:"root",
@@ -16,17 +17,19 @@ var credenciales = {
 //Exponer una carpeta como publica, unicamente para archivos estaticos: .html, imagenes, .css, .js
 
 app.use(express.static("public")); //Middlewares
-  app.use(express.static("home")); //COMENTAR ESTO LUEGO
+//app.use(express.static("home"));
 app.use(session({secret:"#2@%#*(&%$#",resave:true, saveUninitialized:true})); //Middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
 //app.use(express.urlencoded({extended:true}));
+app.use(flash());
 
 const home = express.static("home");
 app.use(
-    function(request, response, next){
-        if (!_.isUndefined(request.session.usuario)){
-            home(request, response, next);
+    function(req, res, next){
+        if (!_.isUndefined(req.session.usuario)){
+            home(req, res, next);
         }
         else
             return next();
@@ -76,27 +79,10 @@ app.post("/crear-usuario", (request, response) => {
         }
         
     );
+   
 });
 
 
-
-/*
-app.post("/crear-contacto", (request, response) => {
-    const conexion = mysql.createConnection(credenciales);
-    var usuario = request.session.usuario;
-    var body = request.body;
-    var sql = "INSERT INTO tbl_contactos(codigo_usuario, codigo_usuario_contacto) VALUES (?,?);";
-    conexion.query(
-        sql,
-        [usuario.codigo_usuario, body.codigo_usuario_contacto],
-        function(err, result){
-            if (err) throw err;
-            response.send({statusCode: 200, message: "Contacto registrado con éxito", result});
-        }
-    );
-});
-
-*/
 
 
 app.get("/logout",function(req, res){
@@ -104,16 +90,6 @@ app.get("/logout",function(req, res){
     res.redirect("index.html");
 	//respuesta.send("Sesion eliminada");
 });
-
-
-
-
-
-
-
-
-
-
 
 
 
