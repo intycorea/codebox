@@ -1,73 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon1.png">
 
+    <link rel="icon" href="img/favicon1.png">
     <title>Home</title>
 
-    <!-- Google Fonts -->
-    <link href="fonts/BalooBhaijaan-Regular.ttf" rel="stylesheet">
-    <link href="fonts/ProstoOne-Regular.ttf" rel="stylesheet">
-    <link href="fonts/Righteous-Regular.ttf" rel="stylesheet">
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     
-
-    <!-- Custom styles for this template -->
-    <link href="css/estiloHome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
 
+</head>
 
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-expand-md  navbar-dark fixed-top bg-dark barra-nav">
-      <figure class="logo">
-        <img src="img/logo2.png">
-      </figure>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Mi perfil </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Actualizar plan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Crear carpeta</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">#</a>
-            </li>
-          
-        </ul>
-      
-      </div>
-    </nav>
-
+<body>
     
 
+    <div id="wrapper">
+            
 
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                    <br><br><br>
+                <li class="sidebar-brand">
+                    <h1 style="color:orange" >Code Box</h1>
+                </li>
+                <li>
+                     <a href="#"><i class="fas fa-home fa-2x"></i>  Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-user-alt fa-2x"></i>   Mi perfil</a>
+                </li>
+                <li>
+                    <a href="#"><i class="far fa-edit fa-2x"></i>   Editor</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-folder-open fa-2x"></i>  Crear Carpeta</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-question-circle fa-2x"></i>  Ayuda</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>Simple Sidebar</h1>
+                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Desplegar Menú</a>
+            
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/all.js"></script>
+    <script src="css/all.css"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/controlador.js"></script>
-  </body>
+
+    <!-- Menu Toggle Script -->
+    
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    
+
+</body>
+
 </html>
